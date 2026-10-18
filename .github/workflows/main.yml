@@ -1,4 +1,4 @@
-name: Test Workflow
+^name: Test Workflow
 
 
 on:
@@ -10,7 +10,7 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: "Hello World
+      - name: "Hello World^
         run: echo "The Workflow folder and file are successfully configured!"
         
       
