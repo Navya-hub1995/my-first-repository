@@ -1,15 +1,16 @@
-name :  Test My Workflow
+name: Test Workflow
+
 
 on:
-
    push:
-      branches: [ "main"]
-    Workflow-dispatch:
+     branches:  [ "main" ]
+   workflow_dispatch:
 
 jobs:
   test-job:
-   runs-on: ubuntu-latest
-   steps:
-     -name: print a success message
-      run: echo "Hello ! The Workflow is Working Perfectly."
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello World
+        run: echo "The Workflow folder and file are successfully configured!"
+        
       
