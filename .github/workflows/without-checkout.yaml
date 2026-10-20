@@ -1,7 +1,7 @@
 name: validating wf without checkout
 
-on: 
-  workflow_dispatch:
+on: push 
+  
     
 
 jobs:
@@ -12,9 +12,11 @@ jobs:
            uses: actions/checkout@v7
          
          - name: display the content of a file
-           run: cat devops.txt
+           run: |
+            cat devops.txt
+            pwd
+            ls-lrth
+            chmod +x uptime.sh
+            ./uptime.sh
 
-         - name: display the date
-           run: date
-         - name: execute the shell script
-           run: ./uptime.sh
+       
