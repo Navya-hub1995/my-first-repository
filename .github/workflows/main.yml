@@ -1,16 +1,21 @@
-name: Test Workflow
-
+name: Secret Practice
 
 on:
-   push:
-     branches:  [ "main" ]
-   workflow_dispatch:
+  push:
 
 jobs:
-  test-job:
+  test-secret:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Hello World
-        run: echo "The Workflow folder and file are successfully configured!"
+      - name: Show secret
+        run: |
+          echo "Secret is configured"
+          echo "Secret length: ${#SECRET_KEY}"
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
+
+
         
       
